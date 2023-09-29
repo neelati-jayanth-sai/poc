@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML POC by Jayanth Sai</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Quicksand&display=swap"
+        rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script  src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script  src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
+    <script defer src="./script.js"></script>
+</head>
+
+<body>
+    <header>HTML POC by Jayanth Sai</header>
+    <div class="container">
+        <div class="left">
+            <nav>
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle">Main Menu</label>
+                <ul>
+                    <li><a onclick="LoadHtml('table') " href="#">Users Listing</a></li>
+                    <li><a onclick="LoadHtml('form')" href="#">Add User</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="right">
+            <div class="target">
+                Technical and Managerial Tutorials
+            </div>
+        </div>
+    </div>
+    <footer>Copyright</footer>
+
+
+</body>
+
+</html>

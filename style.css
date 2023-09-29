@@ -1,0 +1,132 @@
+
+
+header {
+    background-color: #94d99cbd;
+    padding: 10px;
+    font-size: 35px;
+    
+
+}
+
+footer {
+    background-color: #94d99cbd;
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    font-size: 20px;
+}
+
+.left {
+    background-color: #0000004c;
+    width: 25%;
+    height: 90vh;
+}
+
+.right {
+    width: 75%;
+    height: 90vh;
+    max-height: 218vh;
+    overflow: scroll;
+    
+}
+
+
+/* For main menu */
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:not(:clicked) ~ ul {
+    display: none;
+}
+
+input[type="checkbox"]:clicked ~ ul {
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* For sections */
+section {
+    display: none;
+    padding: 20px;
+    background-color: #D3D3D3;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #808080;
+    text-align: left;
+    padding: 10px;
+}
+/* form */
+
+.add-user-form form{
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    
+}
+
+.add-user-form label {
+    margin-bottom: 5px;
+}
+
+.add-user-form input[type="text"],
+.add-user-form input[type="email"],
+.add-user-form input[type="password"],
+.add-user-form input[type="file"],
+.add-user-form input[type="date"],
+.add-user-form input[type="tel"]{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #080808;
+    border-radius: 5px;
+}
+
+.add-user-form button[type="button"],
+.add-user-form input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-user-form button[type="button"]:hover,
+.add-user-form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.add-user-form #bio {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #080808;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+.scrollable {
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+label.error {
+    color: red;     
+    font-size: 14px; 
+}
