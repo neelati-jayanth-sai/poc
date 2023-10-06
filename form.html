@@ -14,43 +14,39 @@
             <input type="text" name="profileTitle"><br><br>
 
             <label for="name">Name:</label>
-            <input type="text"name="name"><br><br>
+            <input type="text" name="name"><br><br>
 
             <label for="email">Email:</label>
             <input type="email" name="email"><br><br>
 
             <label for="password">Password:</label>
-            <input type="password" name="password">
+            <input type="password" name="password" autocomplete="current-password">
             <button type="button" onclick="togglePasswordVisibility()">Show/Hide Password</button><br><br>
 
             <label for="image">Image:</label>
-            <input type="file" name="image"><br><br>
+            <input type="text" name="image"><br><br>
 
             <label for="dob">DOB:</label>
             <input type="date" name="dob"><br><br>
 
             <label for="phone">Phone No:</label>
-            <input type="tel" id="phone" name="phone"><br><br>
+            <input type="tel" name="phone"><br><br>
 
             <label for="introVideo">Intro Video:</label>
-            <embed width="560" height="315" src="https://www.youtube.com/embed/XIMLoLxmTDw" frameborder="0"
-                allowfullscreen></embed><br><br>
+            <input type="text" name="introVideo"><br><br>
 
-            <label for="favoriteVideo">Favorite Video:</label>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/XIMLoLxmTDw" frameborder="0"
-                allowfullscreen></iframe><br><br>
+            <label for="favouriteVideo">Favourite Video:</label>
+            <input type="text" name="favouriteVideo"><br><br>
 
 
             <label for="bio">Bio:</label><br>
-            <textarea  name="bio"
-                style="border: 1px solid #ccc; height: 150px; overflow-y: scroll;"></textarea><br><br>
+            <textarea name="bio" style="border: 1px solid #ccc; height: 150px; overflow-y: scroll;"></textarea><br><br>
 
             <label for="profileColor">Profile Color:</label>
             <input type="color" name="profileColor"><br><br>
 
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" id="submit-form">
         </form>
-
     </div>
 </body>
 
