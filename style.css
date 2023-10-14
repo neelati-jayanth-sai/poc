@@ -67,10 +67,10 @@ th, td {
 }
 /* form */
 
-.add-user-form form{
+
+form{
     padding: 30px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    
 }
 
 .add-user-form label {
@@ -82,7 +82,13 @@ th, td {
 .add-user-form input[type="password"],
 .add-user-form input[type="link"],
 .add-user-form input[type="date"],
-.add-user-form input[type="tel"]{
+.add-user-form input[type="tel"],
+#editForm input[type="text"],
+#editForm input[type="email"],
+#editForm input[type="password"],
+#editForm input[type="link"],
+#editForm input[type="date"],
+#editForm input[type="tel"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #080808;
@@ -90,7 +96,9 @@ th, td {
 }
 
 .add-user-form button[type="button"],
-.add-user-form input[type="submit"] {
+.add-user-form input[type="submit"],
+#editForm button[type="button"],
+#editForm input[type="submit"] {
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -100,11 +108,14 @@ th, td {
 }
 
 .add-user-form button[type="button"]:hover,
-.add-user-form input[type="submit"]:hover {
+.add-user-form input[type="submit"]:hover,
+#editForm button[type="button"]:hover,
+#editForm input[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-.add-user-form #bio {
+.add-user-form #bio,
+#editForm #bio {
     width: 100%;
     padding: 10px;
     border: 1px solid #080808;

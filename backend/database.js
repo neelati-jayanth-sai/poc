@@ -49,36 +49,30 @@ export const getUserById = async (id) => {
     }
 };
 
-export const updateUser = async (email, updateFields) => {
+export const updateUser = async (userId, name, profileTitle, email, password, image, dob, phone, bio, profileColor, introVideo, favouriteVideo) => {
     try {
-
-        if (typeof updateFields !== 'object' || updateFields === null) {
-            throw new Error('Invalid updateFields. It should be an object.');
-        }
-
-        const setClause = Object.keys(updateFields)
-            .map(field => `${field} = ?`)
-            .join(', ');
-
-        const values = Object.values(updateFields);
-        console.log(setClause)
-        console.log(values)
         const result = await pool.query(`
             UPDATE user
-            SET ${setClause}
-            WHERE email = ?
-        `, [...values, email]);
+            SET name = ?, 
+                profileTitle = ?, 
+                email = ?, 
+                password = ?, 
+                image = ?, 
+                dob = ?, 
+                phone = ?, 
+                bio = ?, 
+                profileColor = ?, 
+                introVideo = ?, 
+                favouriteVideo = ?
+            WHERE userId = ?;
+        `, [name, profileTitle, email, password, image, dob, phone, bio, profileColor, introVideo, favouriteVideo, userId]);
 
         return result;
     } catch (error) {
-        console.error(`Error updating user with email ${email}:`, error.message);
-        throw error;
+        console.error('Error updating user:', error.message);
+        throw error; 
     }
 };
 
 
-// const result = await createUser('jayanth', 'fasdf', 'hk1j@gmail.com', 'null', 'afdsfsdafasdf', '2023-09-30', '1234167824', 'asdfdfsdafsdfsdafsdfasdf', '#000000', '');
-// const allUsers = await getAllUsers();
-// const userByEmail = await getUserByEmail('hk1j@gmail.com');
-// const updateResult = await updateUser('hk1j@gmail.com', { bio: 'Updated bio text', profileColor: '#FFFFFF' });
-// console.log(updateResult);
+

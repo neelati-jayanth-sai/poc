@@ -54,17 +54,44 @@ app.delete('/deleteUser/:id', async (req, res) => {
     }
 });
 
-app.put('/updateUser/:email', async (req, res) => {
-    const email = req.params.email;
-    const updateFields = req.body;
+app.put('/updateUser/:id', async (req, res) => {
+    const userId = req.params.id;
+    const {
+        name,
+        profileTitle,
+        email,
+        password,
+        image,
+        dob,
+        phone,
+        bio,
+        profileColor,
+        introVideo,
+        favouriteVideo,
+    } = req.body;
 
     try {
-        const result = await updateUser(email, updateFields);
+        const result = await updateUser(
+            userId,
+            name,
+            profileTitle,
+            email,
+            password,
+            image,
+            dob,
+            phone,
+            bio,
+            profileColor,
+            introVideo,
+            favouriteVideo
+        );
+
         res.json({ success: true, message: 'User updated successfully', result });
     } catch (error) {
-        res.status(500).json({ success: false, message: `Error updating user with email ${email}`, error: error.message });
+        res.status(500).json({ success: false, message: `Error updating user with ID ${userId}`, error: error.message });
     }
 });
+
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
